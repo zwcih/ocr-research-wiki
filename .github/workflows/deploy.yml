@@ -26,8 +26,17 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Restore Quartz plugins
-        run: npx quartz plugin restore
+      - name: Prepare enabled Quartz plugin lockfile
+        run: node scripts/restore-enabled-quartz-plugins.mjs --prepare-only
+      - name: Cache built Quartz plugins
+        id: quartz-plugins-cache
+        uses: actions/cache@v4
+        with:
+          path: .quartz/plugins
+          key: ${{ runner.os }}-node22-quartz-plugins-${{ hashFiles('.quartz/enabled-quartz.lock.json') }}
+      - name: Restore enabled Quartz plugins
+        if: steps.quartz-plugins-cache.outputs.cache-hit != 'true'
+        run: node scripts/restore-enabled-quartz-plugins.mjs
       - name: Patch Quartz plugins for GitHub Pages subpath
         run: node scripts/patch-quartz-subpath.mjs
       - name: Build Quartz
