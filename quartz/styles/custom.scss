@@ -57,8 +57,7 @@
   }
 
   .eink-mode-toggle-inline {
-    border-color: #000000;
-    font-weight: 700;
+    color: #000000;
   }
 }
 
@@ -108,20 +107,20 @@
 .eink-mode-toggle-inline {
   display: inline-grid;
   place-items: center;
-  width: 32px;
-  min-height: 32px;
+  width: 20px;
+  height: 32px;
   padding: 0;
-  border: 1px solid var(--lightgray);
-  border-radius: 4px;
-  background: var(--light);
+  border: 0;
+  background: none;
   color: var(--darkgray);
   cursor: pointer;
-  font: inherit;
+  vertical-align: top;
 }
 
 .eink-control-icon {
-  width: 21px;
-  height: 21px;
+  display: block;
+  width: 20px;
+  height: 20px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.7;

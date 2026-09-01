@@ -97,7 +97,7 @@ export default (() => {
             return resource
           }
         })}
-        <script src={`${joinSegments(baseDir, "static/eink-mode.js")}?v=20260901-2`}></script>
+        <script src={`${joinSegments(baseDir, "static/eink-mode.js")}?v=20260901-3`}></script>
       </head>
     )
   }
