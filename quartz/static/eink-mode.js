@@ -2,6 +2,7 @@
   "use strict"
 
   var STORAGE_KEY = "quartz-eink-mode"
+  var READER_STORAGE_KEY = "quartz-reader-mode"
   var root = document.documentElement
 
   function readSavedMode() {
@@ -15,6 +16,20 @@
   function saveMode(enabled) {
     try {
       window.localStorage.setItem(STORAGE_KEY, enabled ? "on" : "off")
+    } catch (_) {}
+  }
+
+  function readReaderMode() {
+    try {
+      return window.sessionStorage.getItem(READER_STORAGE_KEY) === "on"
+    } catch (_) {
+      return false
+    }
+  }
+
+  function saveReaderMode(enabled) {
+    try {
+      window.sessionStorage.setItem(READER_STORAGE_KEY, enabled ? "on" : "off")
     } catch (_) {}
   }
 
@@ -45,6 +60,17 @@
     setMode(root.getAttribute("data-eink-mode") !== "on")
   }
 
+  var readerModeEnabled = readReaderMode()
+
+  function setReaderMode(enabled) {
+    readerModeEnabled = enabled
+    root.setAttribute("reader-mode", enabled ? "on" : "off")
+    saveReaderMode(enabled)
+    document.dispatchEvent(
+      new CustomEvent("readermodechange", { detail: { mode: enabled ? "on" : "off" } }),
+    )
+  }
+
   function pageStep(direction) {
     var overlap = Math.max(48, Math.round(window.innerHeight * 0.1))
     var distance = Math.max(1, window.innerHeight - overlap)
@@ -62,8 +88,7 @@
   }
 
   function exitReaderMode() {
-    var button = document.querySelector(".readermode")
-    if (button) button.click()
+    setReaderMode(false)
   }
 
   function makeButton(className, label, title) {
@@ -86,6 +111,32 @@
     toggle.setAttribute("data-eink-toggle", "")
     toggle.addEventListener("click", toggleMode)
     readerButton.insertAdjacentElement("afterend", toggle)
+  }
+
+  function manageReaderButtons() {
+    var buttons = document.querySelectorAll(".readermode")
+    for (var i = 0; i < buttons.length; i++) {
+      var button = buttons[i]
+      if (button.hasAttribute("data-eink-reader-managed")) continue
+
+      button.setAttribute("data-eink-reader-managed", "")
+      button.addEventListener(
+        "click",
+        function (event) {
+          event.preventDefault()
+          event.stopImmediatePropagation()
+          setReaderMode(!readerModeEnabled)
+        },
+        true,
+      )
+    }
+  }
+
+  function fixHomeLink() {
+    var home = document.querySelector(".breadcrumb-container .breadcrumb-element:first-child a")
+    if (home && typeof window.__quartzUrl === "function") {
+      home.href = window.__quartzUrl("")
+    }
   }
 
   function ensureDock() {
@@ -123,8 +174,11 @@
   }
 
   function setupPage() {
+    manageReaderButtons()
     ensureInlineToggle()
     ensureDock()
+    fixHomeLink()
+    root.setAttribute("reader-mode", readerModeEnabled ? "on" : "off")
     updateButtons(root.getAttribute("data-eink-mode") === "on")
     updatePagerState()
   }
@@ -149,6 +203,7 @@
 
   var initialMode = requestedByUrl() || readSavedMode()
   root.setAttribute("data-eink-mode", initialMode ? "on" : "off")
+  root.setAttribute("reader-mode", readerModeEnabled ? "on" : "off")
   if (requestedByUrl()) saveMode(true)
 
   if (document.readyState === "loading") {
