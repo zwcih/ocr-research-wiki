@@ -18,10 +18,9 @@
 
 原始论文不存入仓库，页面优先链接 arXiv、DOI、OpenReview 或官方来源。
 
-## 自动发布
+## 发布
 
-- 推送到 `main` 后，GitHub Actions 自动构建并发布 Quartz 网站。
-- PDF 工作流定期汇总知识库，发布到 GitHub Releases。
+当前网站与 PDF 已发布；自动定期更新配置将在仓库工作流权限启用后加入。
 
 ## 本地预览
 
