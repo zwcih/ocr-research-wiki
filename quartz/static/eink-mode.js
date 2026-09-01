@@ -101,13 +101,23 @@
     return button
   }
 
+  function addEinkReaderIcon(button) {
+    button.innerHTML =
+      '<svg class="eink-control-icon" viewBox="0 0 24 24" aria-hidden="true">' +
+      '<rect x="4" y="2.5" width="16" height="19" rx="2"></rect>' +
+      '<path d="M8 7h8M8 10.5h8M8 14h6"></path>' +
+      '<circle cx="12" cy="18.2" r="0.8"></circle>' +
+      "</svg>"
+  }
+
   function ensureInlineToggle() {
     if (document.querySelector(".eink-mode-toggle-inline")) return
 
     var readerButton = document.querySelector(".readermode")
     if (!readerButton || !readerButton.parentElement) return
 
-    var toggle = makeButton("eink-mode-toggle-inline", "墨水屏", "进入墨水屏模式")
+    var toggle = makeButton("eink-mode-toggle-inline", "", "进入墨水屏模式")
+    addEinkReaderIcon(toggle)
     toggle.setAttribute("data-eink-toggle", "")
     toggle.addEventListener("click", toggleMode)
     readerButton.insertAdjacentElement("afterend", toggle)

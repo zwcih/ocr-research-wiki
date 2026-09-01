@@ -106,16 +106,27 @@
 }
 
 .eink-mode-toggle-inline {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
   min-height: 32px;
-  padding: 0.2rem 0.55rem;
+  padding: 0;
   border: 1px solid var(--lightgray);
   border-radius: 4px;
   background: var(--light);
   color: var(--darkgray);
   cursor: pointer;
   font: inherit;
-  font-size: 0.78rem;
-  white-space: nowrap;
+}
+
+.eink-control-icon {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .eink-controls {
