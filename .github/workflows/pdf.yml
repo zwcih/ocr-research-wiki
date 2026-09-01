@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - name: Install PDF toolchain and Chinese fonts
+      - name: Install current Pandoc
+        uses: pandoc/actions/setup@v1
+      - name: Install TeX toolchain and Chinese fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends pandoc texlive-xetex texlive-lang-chinese texlive-fonts-recommended fonts-noto-cjk lmodern
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-lang-chinese texlive-fonts-recommended fonts-noto-cjk lmodern
       - name: Assemble book
         run: python3 scripts/build_book.py
       - name: Generate PDF
