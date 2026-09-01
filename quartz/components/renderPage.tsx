@@ -30,7 +30,23 @@ export function pageResources(
   staticResources: StaticResources,
 ): StaticResources {
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
-  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  const contentIndexScript = `
+const __quartzContentIndexUrl = new URL("${contentIndexPath}", document.baseURI)
+window.__quartzContentIndex = __quartzContentIndexUrl.href
+window.__quartzBasePath = __quartzContentIndexUrl.pathname.replace(/\\/static\\/contentIndex\\.json$/, "")
+window.__quartzUrl = (slug = "") => {
+  const cleanSlug = String(slug).replace(/^\\/+/, "")
+  const base = window.__quartzBasePath.replace(/\\/$/, "")
+  return cleanSlug ? base + "/" + cleanSlug : base + "/"
+}
+window.__quartzCurrentSlug = () => {
+  const base = window.__quartzBasePath.replace(/\\/$/, "")
+  const path = window.location.pathname.startsWith(base)
+    ? window.location.pathname.slice(base.length)
+    : window.location.pathname
+  return path.replace(/^\\/+|\\/+$/g, "")
+}
+const fetchData = fetch(window.__quartzContentIndex).then(data => data.json())`
 
   const resources: StaticResources = {
     css: [

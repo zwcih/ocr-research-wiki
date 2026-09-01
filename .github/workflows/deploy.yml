@@ -28,6 +28,8 @@ jobs:
       - run: npm ci
       - name: Restore Quartz plugins
         run: npx quartz plugin restore
+      - name: Patch Quartz plugins for GitHub Pages subpath
+        run: node scripts/patch-quartz-subpath.mjs
       - name: Build Quartz
         run: npx quartz build
       - uses: actions/upload-pages-artifact@v3
