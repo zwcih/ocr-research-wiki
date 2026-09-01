@@ -97,6 +97,7 @@ export default (() => {
             return resource
           }
         })}
+        <script src={joinSegments(baseDir, "static/eink-mode.js")}></script>
       </head>
     )
   }

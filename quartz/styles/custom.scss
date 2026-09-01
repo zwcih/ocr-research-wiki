@@ -1,3 +1,185 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// E-ink mode: high contrast, low-motion rendering with screen-sized navigation.
+:root[data-eink-mode="on"] {
+  color-scheme: light;
+  --light: #ffffff;
+  --lightgray: #b8b8b8;
+  --gray: #595959;
+  --darkgray: #111111;
+  --dark: #000000;
+  --secondary: #000000;
+  --tertiary: #333333;
+  --highlight: #eeeeee;
+  --textHighlight: #d8d8d8;
+
+  scroll-behavior: auto;
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+  }
+
+  a.internal {
+    background: transparent;
+    border-bottom: 1px solid #777777;
+    border-radius: 0;
+    text-decoration: none;
+  }
+
+  img,
+  canvas,
+  svg:not(.eink-control-icon) {
+    filter: grayscale(1) contrast(1.08);
+  }
+
+  pre,
+  code,
+  blockquote,
+  table,
+  th,
+  td {
+    border-color: #777777;
+  }
+
+  .eink-mode-toggle-inline {
+    border-color: #000000;
+    font-weight: 700;
+  }
+}
+
+// Reader mode must reclaim the sidebar grid tracks instead of only making them transparent.
+:root[reader-mode="on"] {
+  .page {
+    max-width: 1100px;
+  }
+
+  .page > #quartz-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-footer" !important;
+    column-gap: 0 !important;
+  }
+
+  .page > #quartz-body > .sidebar.left,
+  .page > #quartz-body > .sidebar.right {
+    display: none !important;
+  }
+
+  .page-header,
+  .center,
+  .page-footer,
+  footer {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+  }
+}
+
+:root[data-eink-mode="on"][reader-mode="on"] {
+  .page {
+    max-width: 1200px;
+  }
+
+  .page > #quartz-body {
+    padding-inline: clamp(0.75rem, 3vw, 2.25rem);
+  }
+}
+
+.eink-mode-toggle-inline {
+  min-height: 32px;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  background: var(--light);
+  color: var(--darkgray);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.eink-controls {
+  position: fixed;
+  z-index: 1000;
+  right: max(0.5rem, env(safe-area-inset-right));
+  top: 50%;
+  display: none;
+  flex-direction: column;
+  gap: 0.45rem;
+  transform: translateY(-50%);
+}
+
+:root[data-eink-mode="on"] .eink-controls,
+:root[reader-mode="on"] .eink-controls {
+  display: flex;
+}
+
+.eink-control {
+  width: 3rem;
+  min-height: 3rem;
+  padding: 0.25rem;
+  border: 1.5px solid #000000;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  font:
+    700 0.78rem/1.1 system-ui,
+    sans-serif;
+}
+
+.eink-control:disabled {
+  border-color: #999999;
+  color: #999999;
+  cursor: default;
+}
+
+.eink-exit-reader {
+  display: none;
+}
+
+:root[reader-mode="on"] .eink-exit-reader {
+  display: block;
+}
+
+:root:not([data-eink-mode="on"]) .eink-page-control,
+:root:not([data-eink-mode="on"]) .eink-dock-mode-toggle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .eink-controls {
+    right: 0.25rem;
+  }
+
+  .eink-control {
+    width: 2.65rem;
+    min-height: 2.65rem;
+    font-size: 0.7rem;
+  }
+
+  :root[data-eink-mode="on"] .page > #quartz-body,
+  :root[reader-mode="on"] .page > #quartz-body {
+    padding-inline: 0.75rem;
+  }
+}
