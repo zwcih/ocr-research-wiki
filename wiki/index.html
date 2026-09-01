@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>Index — 内容目录</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans SC:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="OCR 与文档智能研究 Wiki"/><meta property="og:title" content="Index — 内容目录"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Index — 内容目录"/><meta name="twitter:description" content="Index — 内容目录 导航入口。查询时先读这里定位相关页。共 67 篇 source（里程碑论文 + 前沿工作）。 📄 每篇 source 页标题下有原文链接（arXiv、DOI 或官方页面），可一键跳转。 Sources — 基础 / 架构 attention-is-all-you-need — Transformer，纯注意力，现代大模型祖先（2017）⭐ resnet-deep-residual-learning — 残差连接，极深网络可训（2015）⭐ Sources — 计算机视觉 alexnet — 点燃深度学习的 ImageNet 冠军（2012）⭐ vgg — 3×3 小..."/><meta property="og:description" content="Index — 内容目录 导航入口。查询时先读这里定位相关页。共 67 篇 source（里程碑论文 + 前沿工作）。 📄 每篇 source 页标题下有原文链接（arXiv、DOI 或官方页面），可一键跳转。 Sources — 基础 / 架构 attention-is-all-you-need — Transformer，纯注意力，现代大模型祖先（2017）⭐ resnet-deep-residual-learning — 残差连接，极深网络可训（2015）⭐ Sources — 计算机视觉 alexnet — 点燃深度学习的 ImageNet 冠军（2012）⭐ vgg — 3×3 小..."/><meta property="og:image:alt" content="Index — 内容目录 导航入口。查询时先读这里定位相关页。共 67 篇 source（里程碑论文 + 前沿工作）。 📄 每篇 source 页标题下有原文链接（arXiv、DOI 或官方页面），可一键跳转。 Sources — 基础 / 架构 attention-is-all-you-need — Transformer，纯注意力，现代大模型祖先（2017）⭐ resnet-deep-residual-learning — 残差连接，极深网络可训（2015）⭐ Sources — 计算机视觉 alexnet — 点燃深度学习的 ImageNet 冠军（2012）⭐ vgg — 3×3 小..."/><meta property="twitter:domain" content="zwcih.github.io/ocr-research-wiki"/><meta property="og:url" content="https://zwcih.github.io/ocr-research-wiki/wiki/index"/><meta property="twitter:url" content="https://zwcih.github.io/ocr-research-wiki/wiki/index"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Index — 内容目录 导航入口。查询时先读这里定位相关页。共 67 篇 source（里程碑论文 + 前沿工作）。 📄 每篇 source 页标题下有原文链接（arXiv、DOI 或官方页面），可一键跳转。 Sources — 基础 / 架构 attention-is-all-you-need — Transformer，纯注意力，现代大模型祖先（2017）⭐ resnet-deep-residual-learning — 残差连接，极深网络可训（2015）⭐ Sources — 计算机视觉 alexnet — 点燃深度学习的 ImageNet 冠军（2012）⭐ vgg — 3×3 小..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.clipboard-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  right: 0;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.clipboard-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.clipboard-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.clipboard-button:focus {
+  outline: 0;
+}
+
+pre:hover > .clipboard-button {
+  opacity: 1;
+  transition: 0.2s;
+}</style><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://zwcih.github.io/ocr-research-wiki/wiki/index-og-image.webp"/><meta property="og:image:url" content="https://zwcih.github.io/ocr-research-wiki/wiki/index-og-image.webp"/><meta name="twitter:image" content="https://zwcih.github.io/ocr-research-wiki/wiki/index-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="wiki/index"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">OCR 与文档智能研究 Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容" placeholder="搜索内容"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a, b) => {\n    if (!a.isFolder &amp;&amp; !b.isFolder || a.isFolder &amp;&amp; b.isFolder) {\n      return (a.displayName || \&quot;\&quot;).localeCompare(b.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a.isFolder &amp;&amp; b.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-68"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-68" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Index — 内容目录</a></div></nav><h1 class="article-title">Index — 内容目录</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-01T00:00:00.000Z">2026年8月01日</time><span>12 min read</span></p></div></div><div class="popover-hint"><article class><h1 id="index--内容目录">Index — 内容目录<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#index--内容目录" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>导航入口。查询时先读这里定位相关页。共 67 篇 source（里程碑论文 + 前沿工作）。</p>
+<blockquote>
+<p>📄 每篇 source 页标题下有<strong>原文链接</strong>（arXiv、DOI 或官方页面），可一键跳转。</p>
+</blockquote>
+<h2 id="sources--基础--架构">Sources — 基础 / 架构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--基础--架构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/sources/attention-is-all-you-need" class="internal" data-slug="wiki/sources/attention-is-all-you-need">attention-is-all-you-need</a> — Transformer，纯注意力，现代大模型祖先（2017）⭐</li>
+<li><a href="../wiki/sources/resnet-deep-residual-learning" class="internal" data-slug="wiki/sources/resnet-deep-residual-learning">resnet-deep-residual-learning</a> — 残差连接，极深网络可训（2015）⭐</li>
+</ul>
+<h2 id="sources--计算机视觉">Sources — 计算机视觉<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--计算机视觉" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/sources/alexnet" class="internal" data-slug="wiki/sources/alexnet">alexnet</a> — 点燃深度学习的 ImageNet 冠军（2012）⭐</li>
+<li><a href="../wiki/sources/vgg" class="internal" data-slug="wiki/sources/vgg">vgg</a> — 3×3 小卷积堆叠，经典 backbone（2014）</li>
+<li><a href="../wiki/sources/googlenet" class="internal" data-slug="wiki/sources/googlenet">googlenet</a> — Inception 模块 + 1×1 卷积（2014）</li>
+<li><a href="../wiki/sources/faster-rcnn" class="internal" data-slug="wiki/sources/faster-rcnn">faster-rcnn</a> — 两阶段检测基石，RPN（2015）</li>
+<li><a href="../wiki/sources/yolo" class="internal" data-slug="wiki/sources/yolo">yolo</a> — 单阶段实时检测开山（2015）</li>
+<li><a href="../wiki/sources/unet" class="internal" data-slug="wiki/sources/unet">unet</a> — 编码解码+skip，分割经典（2015）</li>
+<li><a href="../wiki/sources/mask-rcnn" class="internal" data-slug="wiki/sources/mask-rcnn">mask-rcnn</a> — 实例分割统一框架（2017）</li>
+</ul>
+<h2 id="sources--detr-系检测">Sources — DETR 系检测<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--detr-系检测" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/sources/detr" class="internal" data-slug="wiki/sources/detr">detr</a> — 集合预测 + 二分匹配 + object query，去 anchor/NMS 开山（2020）⭐</li>
+<li><a href="../wiki/sources/deformable-detr" class="internal" data-slug="wiki/sources/deformable-detr">deformable-detr</a> — 可变形注意力 + 多尺度，治慢收敛/小目标（2020）⭐</li>
+<li><a href="../wiki/sources/dino-detr" class="internal" data-slug="wiki/sources/dino-detr">dino-detr</a> — 对比去噪 + 混合query选择，DETR系 SOTA 拐点（2022）⭐</li>
+<li><a href="../wiki/sources/rt-doclayout" class="internal" data-slug="wiki/sources/rt-doclayout">rt-doclayout</a> — 百度 33M RT-DETR，单query一次前向出 分类/框/像素mask/阅读顺序，92.46/132.1FPS（2026）⭐⭐⭐ 前端最新实现</li>
+<li><a href="../wiki/sources/parser-oriented-refinement" class="internal" data-slug="wiki/sources/parser-oriented-refinement">parser-oriented-refinement</a> — D-FINE上加结构精修，NMS-free retention+共享排序稳定「检测→解析器」界面（2026）⭐⭐⭐</li>
+<li><a href="../wiki/sources/vit" class="internal" data-slug="wiki/sources/vit">vit</a> — Vision Transformer，统一 CV/NLP（2020）⭐</li>
+<li><a href="../wiki/sources/clip" class="internal" data-slug="wiki/sources/clip">clip</a> — 图文对比，零样本多模态（2021）⭐</li>
+<li><a href="../wiki/sources/mae" class="internal" data-slug="wiki/sources/mae">mae</a> — 视觉自监督的 BERT 时刻（2021）</li>
+<li><a href="../wiki/sources/beit" class="internal" data-slug="wiki/sources/beit">beit</a> — 图像版 BERT，MIM 开山（预测 visual token，2021）</li>
+<li><a href="../wiki/sources/simmim" class="internal" data-slug="wiki/sources/simmim">simmim</a> — 最简 MIM（直接回归像素，2021）</li>
+<li><a href="../wiki/sources/dae" class="internal" data-slug="wiki/sources/dae">dae</a> — 去噪自编码器，denoising 信号源头（ICML 2008）</li>
+<li><a href="../wiki/sources/ddpm" class="internal" data-slug="wiki/sources/ddpm">ddpm</a> — 扩散生成模型奠基（2020）⭐</li>
+</ul>
+<h2 id="sources--语言模型--llm">Sources — 语言模型 / LLM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--语言模型--llm" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/sources/word2vec" class="internal" data-slug="wiki/sources/word2vec">word2vec</a> — 词向量时代开端（2013）</li>
+<li><a href="../wiki/sources/seq2seq" class="internal" data-slug="wiki/sources/seq2seq">seq2seq</a> — 编码解码框架确立（2014）</li>
+<li><a href="../wiki/sources/bert" class="internal" data-slug="wiki/sources/bert">bert</a> — 双向预训练，横扫 NLP（2018）⭐</li>
+<li><a href="../wiki/sources/gpt3" class="internal" data-slug="wiki/sources/gpt3">gpt3</a> — few-shot / in-context learning（2020）⭐</li>
+<li><a href="../wiki/sources/t5" class="internal" data-slug="wiki/sources/t5">t5</a> — text-to-text 统一框架（2019）</li>
+<li><a href="../wiki/sources/instructgpt" class="internal" data-slug="wiki/sources/instructgpt">instructgpt</a> — RLHF 对齐，ChatGPT 前身（2022）⭐</li>
+<li><a href="../wiki/sources/llama" class="internal" data-slug="wiki/sources/llama">llama</a> — 开源基础模型起点（2023）⭐</li>
+<li><a href="../wiki/sources/chinchilla" class="internal" data-slug="wiki/sources/chinchilla">chinchilla</a> — 修正 scaling law（2022）⭐</li>
+<li><a href="../wiki/sources/textbooks-are-all-you-need" class="internal" data-slug="wiki/sources/textbooks-are-all-you-need">textbooks-are-all-you-need</a> — phi-1，数据质量优先（2023）⭐</li>
+<li><a href="../wiki/sources/phi4-mini" class="internal" data-slug="wiki/sources/phi4-mini">phi4-mini</a> — 微软 Phi-4-Mini/Multimodal，Mixture-of-LoRAs（2025）（深读）</li>
+<li><a href="../wiki/sources/qwen3" class="internal" data-slug="wiki/sources/qwen3">qwen3</a> — 阿里 Qwen3，thinking双模统一 + thinking budget（2025）⭐（深读）</li>
+<li><a href="../wiki/sources/qwen3.5-omni" class="internal" data-slug="wiki/sources/qwen3.5-omni">qwen3.5-omni</a> — 阿里原生全模态 + omni agent + ARIA（2026）⭐（深读）</li>
+</ul>
+<h2 id="sources--ocr--文档智能">Sources — OCR / 文档智能<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--ocr--文档智能" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/sources/crnn" class="internal" data-slug="wiki/sources/crnn">crnn</a> — CNN+RNN+CTC，文本行识别经典（2015）⭐</li>
+<li><a href="../wiki/sources/craft" class="internal" data-slug="wiki/sources/craft">craft</a> — 字符区域感知文本检测（2019）</li>
+<li><a href="../wiki/sources/seqclr" class="internal" data-slug="wiki/sources/seqclr">seqclr</a> — 首个文本识别自监督对比学习，序列级 instance-mapping（CVPR 2021）⭐</li>
+<li><a href="../wiki/sources/dig" class="internal" data-slug="wiki/sources/dig">dig</a> — ⭐⭐ 对比+MIM 双分支文本识别自监督（“读与写”，ACM MM 2022，encoder pretrain 直接参考）</li>
+<li><a href="../wiki/sources/trocr" class="internal" data-slug="wiki/sources/trocr">trocr</a> — 纯 Transformer 端到端识别（2021）</li>
+<li><a href="../wiki/sources/donut" class="internal" data-slug="wiki/sources/donut">donut</a> — OCR-free 文档理解（2021）⭐</li>
+<li><a href="../wiki/sources/nougat" class="internal" data-slug="wiki/sources/nougat">nougat</a> — 学术 PDF→Markdown，擅公式（2023）</li>
+<li><a href="../wiki/sources/layoutlmv3" class="internal" data-slug="wiki/sources/layoutlmv3">layoutlmv3</a> — 文档多模态预训练代表（2022）⭐</li>
+<li><a href="../wiki/sources/dit" class="internal" data-slug="wiki/sources/dit">dit</a> — 文档图像自监督 backbone（2022）</li>
+<li><a href="../wiki/sources/pix2struct" class="internal" data-slug="wiki/sources/pix2struct">pix2struct</a> — 截图解析预训练 VLM（2022）</li>
+<li><a href="../wiki/sources/got-ocr2" class="internal" data-slug="wiki/sources/got-ocr2">got-ocr2</a> — 统一端到端 OCR-2.0（2024）⭐</li>
+<li><a href="../wiki/sources/deepseek-ocr" class="internal" data-slug="wiki/sources/deepseek-ocr">deepseek-ocr</a> — 光学上下文压缩（2024）⭐</li>
+<li><a href="../wiki/sources/layoutlite" class="internal" data-slug="wiki/sources/layoutlite">layoutlite</a> — 元蓝科技/北师大，即插即用 token 级隐式版面分析，Conv1D 判信息量+GRPO 免标注训练，50% 视觉token压缩几乎不掉分、prefill/FLOPs/KV降40%+（2026）⭐⭐</li>
+<li><a href="../wiki/sources/unlimited-ocr" class="internal" data-slug="wiki/sources/unlimited-ocr">unlimited-ocr</a> — 百度 R-SWA 恒定 KV cache，32K 上下文单次解析几十页，OmniDocBench v1.5 93%（2026）⭐⭐</li>
+<li><a href="../wiki/sources/monkeyocr-v2" class="internal" data-slug="wiki/sources/monkeyocr-v2">monkeyocr-v2</a> — 视觉重建路线 + 文档原生底座，MonkeyDoc v2 1.13亿图像（2026）⭐</li>
+<li><a href="../wiki/sources/ovis-ocr2" class="internal" data-slug="wiki/sources/ovis-ocr2">ovis-ocr2</a> — 阿里 0.8B 端到端，OmniDocBench SOTA 96.58（2026）⭐</li>
+<li><a href="../wiki/sources/glm-ocr" class="internal" data-slug="wiki/sources/glm-ocr">glm-ocr</a> — 智谱 0.9B，Multi-Token Prediction 加速解码（2026）</li>
+<li><a href="../wiki/sources/lai-ade-gen2" class="internal" data-slug="wiki/sources/lai-ade-gen2">lai-ade-gen2</a> — LandingAI ADE Gen2 / DPT-3，商业文档抽取（2026）</li>
+<li><a href="../wiki/sources/lai-signatures-stamps-seals" class="internal" data-slug="wiki/sources/lai-signatures-stamps-seals">lai-signatures-stamps-seals</a> — ADE 签名/印章/钢印检测（2026）</li>
+<li><a href="../wiki/sources/gdp-pdf-benchmark" class="internal" data-slug="wiki/sources/gdp-pdf-benchmark">gdp-pdf-benchmark</a> — 专业 PDF grounded 推理基准，最好模型仅 30.7%（2026）⭐</li>
+<li><a href="../wiki/sources/more-benchmark" class="internal" data-slug="wiki/sources/more-benchmark">more-benchmark</a> — 腾讯 149 语种多语言文档解析基准，含 code/catalog；decoupled→layout-dependent 暴跌16分证瓶颈在版面/阅读序（2026）⭐</li>
+<li><a href="../wiki/sources/ocr-vs-mllm-benchmark" class="internal" data-slug="wiki/sources/ocr-vs-mllm-benchmark">ocr-vs-mllm-benchmark</a> — ⭐ 传统OCR/商业云/商业LLM/开源LLM 16系统横评，首把延迟+成本设为一等维度；无单一范式全胜，结构化靠OCR、手写靠LLM（IPM 2027）</li>
+</ul>
+<h2 id="sources--omnidocbench-leaderboard-上的-specialist-模型-直接竞品参考2025-2026">Sources — OmniDocBench leaderboard 上的 specialist 模型（⭐ 直接竞品/参考，2025-2026）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--omnidocbench-leaderboard-上的-specialist-模型-直接竞品参考2025-2026" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="两段解耦检测识别和此类-ocr-架构同构">两段解耦（检测→识别，和此类 OCR 架构同构）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#两段解耦检测识别和此类-ocr-架构同构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="../wiki/sources/paddleocr-vl" class="internal" data-slug="wiki/sources/paddleocr-vl">paddleocr-vl</a> — 百度 0.9B，NaViT 编码器+ERNIE-0.3B，layout→元素识别</li>
+<li><a href="../wiki/sources/mineru2.5" class="internal" data-slug="wiki/sources/mineru2.5">mineru2.5</a> — 上海AI Lab 1.2B，降采样做 layout + 原分辨率 crop 做识别（解耦最彻底）⭐</li>
+<li><a href="../wiki/sources/mineru2.5-pro" class="internal" data-slug="wiki/sources/mineru2.5-pro">mineru2.5-pro</a> — 架构不变，纯数据/训练驱动 +2.71 分打过 200× 大模型（2026）⭐</li>
+<li><a href="../wiki/sources/dolphin" class="internal" data-slug="wiki/sources/dolphin">dolphin</a> — 字节 analyze-then-parse，异构锦点提示 + 元素并行解析⭐</li>
+<li><a href="../wiki/sources/dolphin-v2" class="internal" data-slug="wiki/sources/dolphin-v2">dolphin-v2</a> — 细粒度 21 类 + 拍摄文档 + 绝对像素坐标（2026）</li>
+<li><a href="../wiki/sources/youtu-parsing" class="internal" data-slug="wiki/sources/youtu-parsing">youtu-parsing</a> — 腾讯优图，token并行+query并行解码，5-11× 加速（2026）⭐⭐</li>
+</ul>
+<h3 id="单模型端到端--统一">单模型端到端 / 统一<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#单模型端到端--统一" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="../wiki/sources/hpd-parsing" class="internal" data-slug="wiki/sources/hpd-parsing">hpd-parsing</a> — 百度 1B，层次并行解码(layout主分支fork并发content分支)+P-MTP，OmniDocBench v1.6 SOTA 94.91 / 4752 TPS（2026）⭐⭐⭐ DETR框直接当fork点</li>
+<li><a href="../wiki/sources/dots-ocr" class="internal" data-slug="wiki/sources/dots-ocr">dots-ocr</a> — 小红书 1.7B，单 VLM 联合 layout+识别+关系（两段式的反方对照）</li>
+<li><a href="../wiki/sources/hunyuan-ocr" class="internal" data-slug="wiki/sources/hunyuan-ocr">hunyuan-ocr</a> — 腾讯 1B，统一感知+语义（spotting/parsing/IE/翻译）</li>
+<li><a href="../wiki/sources/qianfan-ocr" class="internal" data-slug="wiki/sources/qianfan-ocr">qianfan-ocr</a> — 百度千帆 4B，Layout-as-Thought 可选思考先出结构（2026）⭐</li>
+<li><a href="../wiki/sources/ocrverse" class="internal" data-slug="wiki/sources/ocrverse">ocrverse</a> — holistic OCR，文本中心+视觉中心（图表/网页/科学图）统一（2026）</li>
+</ul>
+<h3 id="训练数据识别方法">训练/数据/识别方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#训练数据识别方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="../wiki/sources/points-reader" class="internal" data-slug="wiki/sources/points-reader">points-reader</a> — 腾讯微信，无蒸馏 + 合成数据 + 迭代自改进(ISS)</li>
+<li><a href="../wiki/sources/logics-parsing" class="internal" data-slug="wiki/sources/logics-parsing">logics-parsing</a> — 阿里，RL 优化复杂版面+阅读顺序，输出 HTML</li>
+<li><a href="../wiki/sources/logics-parsing-v2" class="internal" data-slug="wiki/sources/logics-parsing-v2">logics-parsing-v2</a> — Omni 统一分类法 + evidence anchoring 证据锦定（2026）</li>
+<li><a href="../wiki/sources/firered-ocr" class="internal" data-slug="wiki/sources/firered-ocr">firered-ocr</a> — 小红书，Format-Constrained GRPO 治结构幻觉（2026）⭐</li>
+<li><a href="../wiki/sources/unirec-opendoc" class="internal" data-slug="wiki/sources/unirec-opendoc">unirec-opendoc</a> — 复旦 0.1B，层次监督 + 语义解耦 tokenizer（后端识别核心）⭐</li>
+</ul>
+<h2 id="sources--手写文本生成-htg造手写合成数据用">Sources — 手写文本生成 (HTG，造手写合成数据用)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--手写文本生成-htg造手写合成数据用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/sources/diffbrush" class="internal" data-slug="wiki/sources/diffbrush">diffbrush</a> — 行级手写生成，词间对齐/间距，行+词双判别器（最贴 HTR）⭐</li>
+<li><a href="../wiki/sources/one-dm" class="internal" data-slug="wiki/sources/one-dm">one-dm</a> — 单样本模仿任意风格，高频风格抽取（门槛最低）</li>
+<li><a href="../wiki/sources/diffusionpen" class="internal" data-slug="wiki/sources/diffusionpen">diffusionpen</a> — 5-shot，混合风格提取器，实证提升 HTR⭐</li>
+<li><a href="../wiki/sources/mae-ldm-htg" class="internal" data-slug="wiki/sources/mae-ldm-htg">mae-ldm-htg</a> — MAE 风格条件 + 半监督适配未见数据集⭐</li>
+<li><a href="../wiki/sources/stylusai" class="internal" data-slug="wiki/sources/stylusai">stylusai</a> — 跨语言风格迁移，打印体图像当内容锦点</li>
+<li><a href="../wiki/sources/vatr" class="internal" data-slug="wiki/sources/vatr">vatr</a> — visual-archetype 字形编码，造罕见字（扩散前经典基线）</li>
+</ul>
+<h2 id="entities">Entities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#entities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="机构--实验室">机构 / 实验室<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#机构--实验室" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>海外</strong></p>
+<ul>
+<li><a href="../wiki/entities/google-deepmind" class="internal" data-slug="wiki/entities/google-deepmind">google-deepmind</a> — Transformer/BERT/T5/ViT/Pix2Struct/Chinchilla 之源</li>
+<li><a href="../wiki/entities/openai" class="internal" data-slug="wiki/entities/openai">openai</a> — CLIP/GPT-3/InstructGPT，生成式+RLHF 范式</li>
+<li><a href="../wiki/entities/meta-fair" class="internal" data-slug="wiki/entities/meta-fair">meta-fair</a> — DETR/MAE/LLaMA/Nougat，检测式+生成式 OCR 双线源头</li>
+<li><a href="../wiki/entities/microsoft-research" class="internal" data-slug="wiki/entities/microsoft-research">microsoft-research</a> — 文档智能重镇（LayoutLM/TrOCR/DiT/phi）</li>
+<li><a href="../wiki/entities/idea" class="internal" data-slug="wiki/entities/idea">idea</a> — DINO-DETR，DETR 系检测核心</li>
+<li><a href="../wiki/entities/sensetime" class="internal" data-slug="wiki/entities/sensetime">sensetime</a> — Deformable-DETR</li>
+<li><a href="../wiki/entities/uc-berkeley" class="internal" data-slug="wiki/entities/uc-berkeley">uc-berkeley</a> — DDPM 扩散范式诞生地</li>
+<li><a href="../wiki/entities/dfki" class="internal" data-slug="wiki/entities/dfki">dfki</a> — StylusAI（德国 AI 研究中心）</li>
+<li><a href="../wiki/entities/univ-modena" class="internal" data-slug="wiki/entities/univ-modena">univ-modena</a> — VATR 手写生成（摩德纳大学）</li>
+</ul>
+<p><strong>国内厂 / 实验室 / 高校</strong></p>
+<ul>
+<li><a href="../wiki/entities/alibaba" class="internal" data-slug="wiki/entities/alibaba">alibaba</a> — Qwen/Ovis-OCR2/Logics-Parsing</li>
+<li><a href="../wiki/entities/baidu" class="internal" data-slug="wiki/entities/baidu">baidu</a> — PaddleOCR-VL/Qianfan-OCR</li>
+<li><a href="../wiki/entities/tencent" class="internal" data-slug="wiki/entities/tencent">tencent</a> — 混元/优图/微信 OCR 全布局</li>
+<li><a href="../wiki/entities/bytedance" class="internal" data-slug="wiki/entities/bytedance">bytedance</a> — Dolphin 系锚点提示解析</li>
+<li><a href="../wiki/entities/deepseek" class="internal" data-slug="wiki/entities/deepseek">deepseek</a> — DeepSeek-OCR 光学上下文压缩</li>
+<li><a href="../wiki/entities/zhipu" class="internal" data-slug="wiki/entities/zhipu">zhipu</a> — GLM-OCR（智谱+清华）</li>
+<li><a href="../wiki/entities/xiaohongshu" class="internal" data-slug="wiki/entities/xiaohongshu">xiaohongshu</a> — FireRed-OCR/dots.ocr</li>
+<li><a href="../wiki/entities/shanghai-ai-lab" class="internal" data-slug="wiki/entities/shanghai-ai-lab">shanghai-ai-lab</a> — MinerU 系（OpenDataLab）</li>
+<li><a href="../wiki/entities/hust" class="internal" data-slug="wiki/entities/hust">hust</a> — MonkeyOCR/CRNN（华中科技大学，白翔系）</li>
+<li><a href="../wiki/entities/fudan-fvl" class="internal" data-slug="wiki/entities/fudan-fvl">fudan-fvl</a> — UniRec-OpenDoc（复旦）</li>
+<li><a href="../wiki/entities/scut" class="internal" data-slug="wiki/entities/scut">scut</a> — DiffBrush/One-DM 手写生成（华南理工）</li>
+<li><a href="../wiki/entities/kingsoft" class="internal" data-slug="wiki/entities/kingsoft">kingsoft</a> — MonkeyOCR 合作（金山）</li>
+<li><a href="../wiki/entities/landingai" class="internal" data-slug="wiki/entities/landingai">landingai</a> — 商业文档智能 ADE 平台</li>
+</ul>
+<h3 id="人物--研究者">人物 / 研究者<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#人物--研究者" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="../wiki/entities/kaiming-he" class="internal" data-slug="wiki/entities/kaiming-he">kaiming-he</a> 何恺明 — ResNet/R-CNN 系/MAE</li>
+<li><a href="../wiki/entities/xiang-bai" class="internal" data-slug="wiki/entities/xiang-bai">xiang-bai</a> 白翔 — CRNN→MonkeyOCR，OCR 中坚</li>
+<li><a href="../wiki/entities/furu-wei" class="internal" data-slug="wiki/entities/furu-wei">furu-wei</a> 韦福如 — MSRA 文档智能统领</li>
+<li><a href="../wiki/entities/lei-cui" class="internal" data-slug="wiki/entities/lei-cui">lei-cui</a> 崔磊 — LayoutLM/TrOCR/DiT</li>
+<li><a href="../wiki/entities/lukasz-blecher" class="internal" data-slug="wiki/entities/lukasz-blecher">lukasz-blecher</a> — Nougat 一作</li>
+<li><a href="../wiki/entities/geewook-kim" class="internal" data-slug="wiki/entities/geewook-kim">geewook-kim</a> 金基旭 — Donut，OCR-free 开创</li>
+<li><a href="../wiki/entities/youngmin-baek" class="internal" data-slug="wiki/entities/youngmin-baek">youngmin-baek</a> 白泳民 — CRAFT 文本检测</li>
+<li><a href="../wiki/entities/kenton-lee" class="internal" data-slug="wiki/entities/kenton-lee">kenton-lee</a> — BERT/Pix2Struct</li>
+<li><a href="../wiki/entities/ilya-sutskever" class="internal" data-slug="wiki/entities/ilya-sutskever">ilya-sutskever</a> — AlexNet/seq2seq/GPT</li>
+<li><a href="../wiki/entities/ashish-vaswani" class="internal" data-slug="wiki/entities/ashish-vaswani">ashish-vaswani</a> — Transformer 一作</li>
+<li><a href="../wiki/entities/alec-radford" class="internal" data-slug="wiki/entities/alec-radford">alec-radford</a> — CLIP/GPT 系</li>
+<li><a href="../wiki/entities/geoffrey-hinton" class="internal" data-slug="wiki/entities/geoffrey-hinton">geoffrey-hinton</a> 辛顿 — 深度学习教父/AlexNet</li>
+</ul>
+<h2 id="concepts">Concepts<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#concepts" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/concepts/noisy-label-learning" class="internal" data-slug="wiki/concepts/noisy-label-learning">noisy-label-learning</a> — 带噪/伪标签学习（突破软标签天花板）</li>
+<li><a href="../wiki/concepts/label-smoothing" class="internal" data-slug="wiki/concepts/label-smoothing">label-smoothing</a> — 标签平滑（抗过度自信正则）</li>
+<li><a href="../wiki/concepts/adamw" class="internal" data-slug="wiki/concepts/adamw">adamw</a> — AdamW（解耦权重衰减的 Adam）</li>
+<li><a href="../wiki/concepts/weight-decay" class="internal" data-slug="wiki/concepts/weight-decay">weight-decay</a> — 正则化与 Weight Decay（L1/L2/AdamW 解耦）</li>
+<li><a href="../wiki/concepts/lr-schedule" class="internal" data-slug="wiki/concepts/lr-schedule">lr-schedule</a> — 学习率调度（warmup/cosine/step）</li>
+<li><a href="../wiki/concepts/loss-functions" class="internal" data-slug="wiki/concepts/loss-functions">loss-functions</a> — 损失函数专题（CE/回归/检测DETR+Focal/AR）</li>
+<li><a href="../wiki/concepts/weight-initialization" class="internal" data-slug="wiki/concepts/weight-initialization">weight-initialization</a> — 参数初始化（Xavier/He）</li>
+<li><a href="../wiki/concepts/optimizer" class="internal" data-slug="wiki/concepts/optimizer">optimizer</a> — Optimizer 优化器专题（SGD/Momentum/Adam/AdamW）</li>
+<li><a href="../wiki/sources/muon" class="internal" data-slug="wiki/sources/muon">muon</a> — Muon（MomentUm Orthogonalized by Newton-Schulz，正交化更新，隐藏层2D矩阵专用）⭐</li>
+<li><a href="../wiki/concepts/normalization" class="internal" data-slug="wiki/concepts/normalization">normalization</a> — Normalization 归一化专题（BN/LN/IN/GN）</li>
+<li><a href="../wiki/concepts/self-attention" class="internal" data-slug="wiki/concepts/self-attention">self-attention</a> / <a href="../wiki/concepts/cross-attention" class="internal" data-slug="wiki/concepts/cross-attention">cross-attention</a> / <a href="../wiki/concepts/multi-head-attention" class="internal" data-slug="wiki/concepts/multi-head-attention">multi-head-attention</a> / <a href="../wiki/concepts/scaled-dot-product-attention" class="internal" data-slug="wiki/concepts/scaled-dot-product-attention">scaled-dot-product-attention</a> — 注意力机制</li>
+<li><a href="../wiki/concepts/denoise" class="internal" data-slug="wiki/concepts/denoise">denoise</a> — 去噪（信号还原 + 扩散模型核心）</li>
+<li><a href="../wiki/concepts/residual-connection" class="internal" data-slug="wiki/concepts/residual-connection">residual-connection</a> — 残差/跳跃连接</li>
+<li><a href="../wiki/concepts/relu" class="internal" data-slug="wiki/concepts/relu">relu</a> — ReLU 修正线性单元（非饱和激活）</li>
+<li><a href="../wiki/concepts/dropout" class="internal" data-slug="wiki/concepts/dropout">dropout</a> — Dropout 随机失活（正则/抗过拟合）</li>
+<li><a href="../wiki/concepts/gelu" class="internal" data-slug="wiki/concepts/gelu">gelu</a> — GELU 高斯误差线性单元（Transformer 主流激活）</li>
+<li><a href="../wiki/concepts/data-quality-over-scale" class="internal" data-slug="wiki/concepts/data-quality-over-scale">data-quality-over-scale</a> — 数据质量优先</li>
+<li><a href="../wiki/concepts/mixture-of-loras" class="internal" data-slug="wiki/concepts/mixture-of-loras">mixture-of-loras</a> — 模态 LoRA 混合（冻结底座接多模态）</li>
+<li><a href="../wiki/concepts/moe" class="internal" data-slug="wiki/concepts/moe">moe</a> — Mixture-of-Experts 专家混合</li>
+<li><a href="../wiki/concepts/ctc" class="internal" data-slug="wiki/concepts/ctc">ctc</a> — 序列无对齐解码</li>
+<li><a href="../wiki/concepts/contrastive-learning" class="internal" data-slug="wiki/concepts/contrastive-learning">contrastive-learning</a> — 对比学习/自监督表示（SimCLR/MoCo 脉络）</li>
+<li><a href="../wiki/concepts/mim" class="internal" data-slug="wiki/concepts/mim">mim</a> — 掩码图像建模（BEiT/SimMIM/MAE 三种做法）</li>
+<li><a href="../wiki/concepts/instance-mapping" class="internal" data-slug="wiki/concepts/instance-mapping">instance-mapping</a> — 序列对比的实例映射（All/Window/Frame-to-instance）</li>
+<li><a href="../wiki/concepts/omnidocbench" class="internal" data-slug="wiki/concepts/omnidocbench">omnidocbench</a> — 文档解析基准</li>
+<li><a href="../wiki/concepts/visual-token-compression" class="internal" data-slug="wiki/concepts/visual-token-compression">visual-token-compression</a> — 视觉 token 压缩（削减喂后端解码器的视觉token，提速降KV；FastV/DeepSeek-OCR/LayoutLite）</li>
+<li><a href="../wiki/concepts/speculative-decoding" class="internal" data-slug="wiki/concepts/speculative-decoding">speculative-decoding</a> — 投机解码（draft+并行验证减串行步）；另见免训练区块版 <a href="../wiki/sources/hsd" class="internal" data-slug="wiki/sources/hsd">hsd</a></li>
+<li><a href="../wiki/concepts/progressive-multi-token-prediction" class="internal" data-slug="wiki/concepts/progressive-multi-token-prediction">progressive-multi-token-prediction</a> — P-MTP，渐进加权多token预测</li>
+<li><a href="../wiki/concepts/fca" class="internal" data-slug="wiki/concepts/fca">fca</a> — Flexible Character Accuracy，阅读顺序无关的字符精度；FCA-CA gap 诊断阅读序 vs 字符误识</li>
+</ul>
+<h2 id="synthesis综合分析">Synthesis（综合分析）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#synthesis综合分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/synthesis/ocr-evolution" class="internal" data-slug="wiki/synthesis/ocr-evolution">ocr-evolution</a> — 端到端 OCR/文档解析演进史（OCR-1.0→2.0 三个时代）</li>
+<li><a href="../wiki/synthesis/visual-compression-vs-reconstruction" class="internal" data-slug="wiki/synthesis/visual-compression-vs-reconstruction">visual-compression-vs-reconstruction</a> — 视觉压缩 vs 视觉重建路线之争</li>
+<li><a href="../wiki/synthesis/synthetic-data-for-ocr" class="internal" data-slug="wiki/synthesis/synthetic-data-for-ocr">synthetic-data-for-ocr</a> — ⭐ 合成数据方法专题（source-of-truth / 难样本驱动 / agent 多样化）</li>
+<li><a href="../wiki/synthesis/handwriting-synthesis" class="internal" data-slug="wiki/synthesis/handwriting-synthesis">handwriting-synthesis</a> — ⭐ 手写文本合成(HTG)专题（扩散模型 / 风格控制 / 行级生成）</li>
+<li><a href="../wiki/synthesis/citation-graph" class="internal" data-slug="wiki/synthesis/citation-graph">citation-graph</a> — ⭐ 引用关系图谱：按被引次数排序，一眼看哪些文章最重要（2026-07-25）</li>
+<li><a href="../wiki/synthesis/label-efficient-ocr" class="internal" data-slug="wiki/synthesis/label-efficient-ocr">label-efficient-ocr</a> — ⭐ 降低标注依赖的五条路径（自监督对比/合成预训/迁移权重/真实合成/HTG），对前端DETR+后端AR 的叠加 pipeline（2026-07-29）</li>
+</ul>
+<h2 id="comparisons对比">Comparisons（对比）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#comparisons对比" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/comparisons/e2e-ocr-comparison" class="internal" data-slug="wiki/comparisons/e2e-ocr-comparison">e2e-ocr-comparison</a> — 端到端 OCR 模型横评（参数/创新/评测表）</li>
+</ul>
+<h2 id="queries问答归档">Queries（问答归档）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#queries问答归档" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><em>（空）</em></p></article><div class="page-listing"><p>6 items under this folder.</p><div><ul class="section-ul"><li class="section-li"><div class="section"><p class="meta"><time datetime="2026-08-13T00:00:00.000Z">2026年8月13日</time></p><div class="desc"><h3><a href="../wiki/sources/" class="internal">sources</a></h3></div><ul class="tags"></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2026-08-07T00:00:00.000Z">2026年8月07日</time></p><div class="desc"><h3><a href="../wiki/concepts/" class="internal">concepts</a></h3></div><ul class="tags"></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2026-07-29T00:00:00.000Z">2026年7月29日</time></p><div class="desc"><h3><a href="../wiki/synthesis/" class="internal">synthesis</a></h3></div><ul class="tags"></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2026-07-25T00:00:00.000Z">2026年7月25日</time></p><div class="desc"><h3><a href="../wiki/entities/" class="internal">entities</a></h3></div><ul class="tags"></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2026-07-23T00:00:00.000Z">2026年7月23日</time></p><div class="desc"><h3><a href="../wiki/comparisons/" class="internal">comparisons</a></h3></div><ul class="tags"></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2026-07-28T00:00:00.000Z">2026年7月28日</time></p><div class="desc"><h3><a href="../wiki/overview" class="internal">Overview — 全局概要</a></h3></div><ul class="tags"></ul></div></li></ul></div></div></div><hr/><div class="page-footer"><div id="stacked-pages-container" data-max-tabs="8" data-mobile-breakpoint="800" data-show-spines="true" data-animate="true"></div></div></div><div class="right sidebar"></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz</a> © 2026</p><ul><li><a href="https://github.com/zwcih/ocr-research-wiki">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">var i='<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg>',s='<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"><path fill-rule="evenodd" fill="rgb(63, 185, 80)" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>',d=()=>{let o=document.getElementsByTagName("pre");for(let n=0;n<o.length;n++){let a=o[n];if(!a)continue;let t=a.getElementsByTagName("code")[0];if(t){let c=(t.dataset.clipboard?JSON.parse(t.dataset.clipboard):t.innerText).replace(/\n\n/g,`
+`),e=document.createElement("button");e.className="clipboard-button",e.type="button",e.innerHTML=i,e.ariaLabel="Copy source";let r=()=>{navigator.clipboard.writeText(c).then(()=>{e.blur(),e.innerHTML=s,setTimeout(()=>{e.innerHTML=i,e.style.borderColor=""},2e3)},l=>console.error(l))};e.addEventListener("click",r),window.addCleanup(()=>e.removeEventListener("click",r)),a.prepend(e)}}};document.addEventListener("nav",d);document.addEventListener("render",d);
+</script><script type="application/javascript" data-persist="true">function c(e){return e.document.body.dataset.slug}var d=e=>`${c(window)}-checkbox-${e}`,l=()=>{document.querySelectorAll("input.checkbox-toggle").forEach((t,s)=>{let n=d(s),o=u=>{let r=u.target?.checked?"true":"false";localStorage.setItem(n,r)};t.addEventListener("change",o),window.addCleanup(()=>t.removeEventListener("change",o)),localStorage.getItem(n)==="true"&&(t.checked=!0)})};document.addEventListener("nav",l);document.addEventListener("render",l);
+</script><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function o(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let c=e.classList.contains("is-collapsed");s.style.gridTemplateRows=c?"0fr":"1fr"}}document.addEventListener("nav",o);document.addEventListener("render",o);
+</script><script type="module" data-persist="true">var C=Object.defineProperty;var b=(s,e,t)=>e in s?C(s,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):s[e]=t;var d=(s,e,t)=>b(s,typeof e!="symbol"?e+"":e,t);function f(s,e){if(!s)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}s?.addEventListener("click",t),window.addCleanup(()=>s?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function y(s){for(;s.firstChild;)s.removeChild(s.firstChild)}var p=class{constructor(e,t){this.container=e;this.content=t;d(this,"isDragging",!1);d(this,"startPan",{x:0,y:0});d(this,"currentPan",{x:0,y:0});d(this,"scale",1);d(this,"MIN_SCALE",.5);d(this,"MAX_SCALE",3);d(this,"cleanups",[]);this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),a=this.onTouchEnd.bind(this),i=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",a),window.addEventListener("resize",i),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",a),()=>window.removeEventListener("resize",i))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,a=t-this.scale;this.currentPan.x-=o*a,this.currentPan.y-=r*a,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},H=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],L;async function M(){let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;L||(L=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs"));let t=L.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let i of e){i.removeAttribute("data-processed");let c=n.get(i);c&&(i.innerHTML=c)}let r=H.reduce((i,c)=>(i[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),i),{}),a=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:a?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let a=e[r],i=a.parentElement,c=i.querySelector(".clipboard-button"),u=i.querySelector(".expand-button"),v=window.getComputedStyle(c),w=c.offsetWidth+parseFloat(v.marginLeft||"0")+parseFloat(v.marginRight||"0");u.style.right=`calc(${w}px + 0.3rem)`,i.prepend(u);let l=i.querySelector("#mermaid-container");if(!l)return;let h=null,g=()=>{let E=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let x=a.querySelector("svg").cloneNode(!0);m.appendChild(x),l.classList.add("active"),E.style.cursor="grab",h=new p(E,m)},T=()=>{l.classList.remove("active"),h?.cleanup(),h=null};u.addEventListener("click",g),f(l,T),window.addCleanup(()=>{h?.cleanup(),u.removeEventListener("click",g)})}}document.addEventListener("nav",M);document.addEventListener("render",M);
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript.js" type="module" data-persist="true"></script></html>
