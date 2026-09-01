@@ -16,7 +16,7 @@ jobs:
       - name: Install PDF toolchain and Chinese fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends pandoc texlive-xetex texlive-lang-chinese fonts-noto-cjk
+          sudo apt-get install -y --no-install-recommends pandoc texlive-xetex texlive-lang-chinese fonts-noto-cjk lmodern
       - name: Assemble book
         run: python3 scripts/build_book.py
       - name: Generate PDF
