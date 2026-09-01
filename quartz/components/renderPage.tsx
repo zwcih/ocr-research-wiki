@@ -51,7 +51,7 @@ const fetchData = fetch(window.__quartzContentIndex).then(data => data.json())`
   const resources: StaticResources = {
     css: [
       {
-        content: joinSegments(baseDir, "index.css"),
+        content: `${joinSegments(baseDir, "index.css")}?v=20260901-2`,
       },
       ...staticResources.css,
     ],
