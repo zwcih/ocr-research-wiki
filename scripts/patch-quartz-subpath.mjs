@@ -3,6 +3,7 @@ import path from "node:path"
 
 const pluginNames = ["explorer", "graph", "search"]
 let patchedFiles = 0
+const verifiedPlugins = new Set()
 
 function patchFile(file) {
   const original = fs.readFileSync(file, "utf8")
@@ -21,7 +22,9 @@ function patchFile(file) {
   }
 
   if (file.includes(`${path.sep}search${path.sep}`)) {
-    content = content.replaceAll('m.href="/"+e.slug', "m.href=window.__quartzUrl(e.slug)")
+    content = content
+      .replaceAll('m.href="/"+e.slug', "m.href=window.__quartzUrl(e.slug)")
+      .replace(/(\w+)\.href="\/"\+(\w+)\.slug/g, "$1.href=window.__quartzUrl($2.slug)")
   }
 
   if (file.includes(`${path.sep}graph${path.sep}`)) {
@@ -34,6 +37,18 @@ function patchFile(file) {
   if (content !== original) {
     fs.writeFileSync(file, content)
     patchedFiles++
+  }
+
+  const pluginName = pluginNames.find((name) => file.includes(`${path.sep}${name}${path.sep}`))
+  if (!pluginName) return
+
+  const requiredMarkers = {
+    explorer: ["window.__quartzContentIndex", "window.__quartzUrl"],
+    graph: ["window.__quartzContentIndex", "window.__quartzCurrentSlug", "window.__quartzUrl"],
+    search: ["window.__quartzContentIndex", "window.__quartzUrl"],
+  }
+  if (requiredMarkers[pluginName].every((marker) => content.includes(marker))) {
+    verifiedPlugins.add(pluginName)
   }
 }
 
@@ -49,8 +64,15 @@ for (const pluginName of pluginNames) {
   }
 }
 
-if (patchedFiles === 0) {
-  throw new Error("No Quartz plugin files were patched; upstream output may have changed")
+const unverifiedPlugins = pluginNames.filter((name) => !verifiedPlugins.has(name))
+if (unverifiedPlugins.length > 0) {
+  throw new Error(
+    `Quartz subpath patch could not be verified for: ${unverifiedPlugins.join(", ")}; upstream output may have changed`,
+  )
 }
 
-console.log(`Patched ${patchedFiles} Quartz plugin bundles for subpath hosting`)
+if (patchedFiles > 0) {
+  console.log(`Patched ${patchedFiles} Quartz plugin bundles for subpath hosting`)
+} else {
+  console.log("Quartz plugin bundles are already patched for subpath hosting")
+}
