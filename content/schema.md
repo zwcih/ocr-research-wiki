@@ -32,6 +32,8 @@ updated: YYYY-MM-DD
 
 论文页应优先提供 arXiv、DOI、OpenReview 或作者官方页面，不在仓库中重复保存论文 PDF。
 
+新增或修改 source 页后运行 `npm run update-recent`，刷新首页“最近更新”列表；列表按 `created` 日期倒序展示最近 12 篇文章。
+
 ## 链接与语言
 
 - 内部交叉引用使用 `[[页面slug]]` 或 `[[页面slug|显示文字]]`。
