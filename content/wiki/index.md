@@ -1,12 +1,12 @@
 ---
 type: index
 title: Index — 内容目录
-updated: 2026-08-01
+updated: 2026-09-02
 ---
 
 # Index — 内容目录
 
-导航入口。查询时先读这里定位相关页。共 67 篇 source（里程碑论文 + 前沿工作）。
+导航入口。查询时先读这里定位相关页。共 81 篇 source（里程碑论文 + 前沿工作）。
 
 > 📄 每篇 source 页标题下有**原文链接**（arXiv、DOI 或官方页面），可一键跳转。
 
@@ -54,6 +54,7 @@ updated: 2026-08-01
 ## Sources — OCR / 文档智能
 - [[crnn]] — CNN+RNN+CTC，文本行识别经典（2015）⭐
 - [[craft]] — 字符区域感知文本检测（2019）
+- [[armorocr]] — 困难视觉文本的定位/识别/spotting 四任务联合强化；AdvSpot 区域级基准（2026）⭐⭐⭐
 - [[seqclr]] — 首个文本识别自监督对比学习，序列级 instance-mapping（CVPR 2021）⭐
 - [[dig]] — ⭐⭐ 对比+MIM 双分支文本识别自监督（“读与写”，ACM MM 2022，encoder pretrain 直接参考）
 - [[trocr]] — 纯 Transformer 端到端识别（2021）
@@ -65,6 +66,7 @@ updated: 2026-08-01
 - [[got-ocr2]] — 统一端到端 OCR-2.0（2024）⭐
 - [[deepseek-ocr]] — 光学上下文压缩（2024）⭐
 - [[layoutlite]] — 元蓝科技/北师大，即插即用 token 级隐式版面分析，Conv1D 判信息量+GRPO 免标注训练，50% 视觉token压缩几乎不掉分、prefill/FLOPs/KV降40%+（2026）⭐⭐
+- [[scver]] — AR 每步按 hidden state 从压缩前高分辨率特征做 deformable 检索；低分辨率近无损（2026）⭐⭐⭐
 - [[unlimited-ocr]] — 百度 R-SWA 恒定 KV cache，32K 上下文单次解析几十页，OmniDocBench v1.5 93%（2026）⭐⭐
 - [[monkeyocr-v2]] — 视觉重建路线 + 文档原生底座，MonkeyDoc v2 1.13亿图像（2026）⭐
 - [[ovis-ocr2]] — 阿里 0.8B 端到端，OmniDocBench SOTA 96.58（2026）⭐
