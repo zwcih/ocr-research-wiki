@@ -1,20 +1,22 @@
 ---
 type: index
 title: Index — 内容目录
-updated: 2026-09-02
+updated: 2026-09-03
 ---
 
 # Index — 内容目录
 
-导航入口。查询时先读这里定位相关页。共 81 篇 source（里程碑论文 + 前沿工作）。
+导航入口。查询时先读这里定位相关页。共 82 篇 source（里程碑论文 + 前沿工作）。
 
 > 📄 每篇 source 页标题下有**原文链接**（arXiv、DOI 或官方页面），可一键跳转。
 
 ## Sources — 基础 / 架构
+
 - [[attention-is-all-you-need]] — Transformer，纯注意力，现代大模型祖先（2017）⭐
 - [[resnet-deep-residual-learning]] — 残差连接，极深网络可训（2015）⭐
 
 ## Sources — 计算机视觉
+
 - [[alexnet]] — 点燃深度学习的 ImageNet 冠军（2012）⭐
 - [[vgg]] — 3×3 小卷积堆叠，经典 backbone（2014）
 - [[googlenet]] — Inception 模块 + 1×1 卷积（2014）
@@ -24,9 +26,11 @@ updated: 2026-09-02
 - [[mask-rcnn]] — 实例分割统一框架（2017）
 
 ## Sources — DETR 系检测
+
 - [[detr]] — 集合预测 + 二分匹配 + object query，去 anchor/NMS 开山（2020）⭐
 - [[deformable-detr]] — 可变形注意力 + 多尺度，治慢收敛/小目标（2020）⭐
 - [[dino-detr]] — 对比去噪 + 混合query选择，DETR系 SOTA 拐点（2022）⭐
+- [[d-fine]] — 四边概率分布逐层精修 + 最终层定位自蒸馏，实时 DETR 精确框回归（ICLR 2025 Spotlight）⭐⭐⭐
 - [[rt-doclayout]] — 百度 33M RT-DETR，单query一次前向出 分类/框/像素mask/阅读顺序，92.46/132.1FPS（2026）⭐⭐⭐ 前端最新实现
 - [[parser-oriented-refinement]] — D-FINE上加结构精修，NMS-free retention+共享排序稳定「检测→解析器」界面（2026）⭐⭐⭐
 - [[vit]] — Vision Transformer，统一 CV/NLP（2020）⭐
@@ -38,6 +42,7 @@ updated: 2026-09-02
 - [[ddpm]] — 扩散生成模型奠基（2020）⭐
 
 ## Sources — 语言模型 / LLM
+
 - [[word2vec]] — 词向量时代开端（2013）
 - [[seq2seq]] — 编码解码框架确立（2014）
 - [[bert]] — 双向预训练，横扫 NLP（2018）⭐
@@ -52,6 +57,7 @@ updated: 2026-09-02
 - [[qwen3.5-omni]] — 阿里原生全模态 + omni agent + ARIA（2026）⭐（深读）
 
 ## Sources — OCR / 文档智能
+
 - [[crnn]] — CNN+RNN+CTC，文本行识别经典（2015）⭐
 - [[craft]] — 字符区域感知文本检测（2019）
 - [[armorocr]] — 困难视觉文本的定位/识别/spotting 四任务联合强化；AdvSpot 区域级基准（2026）⭐⭐⭐
@@ -78,20 +84,26 @@ updated: 2026-09-02
 - [[ocr-vs-mllm-benchmark]] — ⭐ 传统OCR/商业云/商业LLM/开源LLM 16系统横评，首把延迟+成本设为一等维度；无单一范式全胜，结构化靠OCR、手写靠LLM（IPM 2027）
 
 ## Sources — OmniDocBench leaderboard 上的 specialist 模型（⭐ 直接竞品/参考，2025-2026）
+
 ### 两段解耦（检测→识别，和此类 OCR 架构同构）
+
 - [[paddleocr-vl]] — 百度 0.9B，NaViT 编码器+ERNIE-0.3B，layout→元素识别
 - [[mineru2.5]] — 上海AI Lab 1.2B，降采样做 layout + 原分辨率 crop 做识别（解耦最彻底）⭐
 - [[mineru2.5-pro]] — 架构不变，纯数据/训练驱动 +2.71 分打过 200× 大模型（2026）⭐
 - [[dolphin]] — 字节 analyze-then-parse，异构锦点提示 + 元素并行解析⭐
 - [[dolphin-v2]] — 细粒度 21 类 + 拍摄文档 + 绝对像素坐标（2026）
 - [[youtu-parsing]] — 腾讯优图，token并行+query并行解码，5-11× 加速（2026）⭐⭐
+
 ### 单模型端到端 / 统一
+
 - [[hpd-parsing]] — 百度 1B，层次并行解码(layout主分支fork并发content分支)+P-MTP，OmniDocBench v1.6 SOTA 94.91 / 4752 TPS（2026）⭐⭐⭐ DETR框直接当fork点
 - [[dots-ocr]] — 小红书 1.7B，单 VLM 联合 layout+识别+关系（两段式的反方对照）
 - [[hunyuan-ocr]] — 腾讯 1B，统一感知+语义（spotting/parsing/IE/翻译）
 - [[qianfan-ocr]] — 百度千帆 4B，Layout-as-Thought 可选思考先出结构（2026）⭐
 - [[ocrverse]] — holistic OCR，文本中心+视觉中心（图表/网页/科学图）统一（2026）
+
 ### 训练/数据/识别方法
+
 - [[points-reader]] — 腾讯微信，无蒸馏 + 合成数据 + 迭代自改进(ISS)
 - [[logics-parsing]] — 阿里，RL 优化复杂版面+阅读顺序，输出 HTML
 - [[logics-parsing-v2]] — Omni 统一分类法 + evidence anchoring 证据锦定（2026）
@@ -99,6 +111,7 @@ updated: 2026-09-02
 - [[unirec-opendoc]] — 复旦 0.1B，层次监督 + 语义解耦 tokenizer（后端识别核心）⭐
 
 ## Sources — 手写文本生成 (HTG，造手写合成数据用)
+
 - [[diffbrush]] — 行级手写生成，词间对齐/间距，行+词双判别器（最贴 HTR）⭐
 - [[one-dm]] — 单样本模仿任意风格，高频风格抽取（门槛最低）
 - [[diffusionpen]] — 5-shot，混合风格提取器，实证提升 HTR⭐
@@ -109,7 +122,9 @@ updated: 2026-09-02
 ## Entities
 
 ### 机构 / 实验室
+
 **海外**
+
 - [[google-deepmind]] — Transformer/BERT/T5/ViT/Pix2Struct/Chinchilla 之源
 - [[openai]] — CLIP/GPT-3/InstructGPT，生成式+RLHF 范式
 - [[meta-fair]] — DETR/MAE/LLaMA/Nougat，检测式+生成式 OCR 双线源头
@@ -121,6 +136,7 @@ updated: 2026-09-02
 - [[univ-modena]] — VATR 手写生成（摩德纳大学）
 
 **国内厂 / 实验室 / 高校**
+
 - [[alibaba]] — Qwen/Ovis-OCR2/Logics-Parsing
 - [[baidu]] — PaddleOCR-VL/Qianfan-OCR
 - [[tencent]] — 混元/优图/微信 OCR 全布局
@@ -136,6 +152,7 @@ updated: 2026-09-02
 - [[landingai]] — 商业文档智能 ADE 平台
 
 ### 人物 / 研究者
+
 - [[kaiming-he]] 何恺明 — ResNet/R-CNN 系/MAE
 - [[xiang-bai]] 白翔 — CRNN→MonkeyOCR，OCR 中坚
 - [[furu-wei]] 韦福如 — MSRA 文档智能统领
@@ -150,6 +167,7 @@ updated: 2026-09-02
 - [[geoffrey-hinton]] 辛顿 — 深度学习教父/AlexNet
 
 ## Concepts
+
 - [[noisy-label-learning]] — 带噪/伪标签学习（突破软标签天花板）
 - [[label-smoothing]] — 标签平滑（抗过度自信正则）
 - [[adamw]] — AdamW（解耦权重衰减的 Adam）
@@ -180,6 +198,7 @@ updated: 2026-09-02
 - [[fca]] — Flexible Character Accuracy，阅读顺序无关的字符精度；FCA-CA gap 诊断阅读序 vs 字符误识
 
 ## Synthesis（综合分析）
+
 - [[ocr-evolution]] — 端到端 OCR/文档解析演进史（OCR-1.0→2.0 三个时代）
 - [[visual-compression-vs-reconstruction]] — 视觉压缩 vs 视觉重建路线之争
 - [[synthetic-data-for-ocr]] — ⭐ 合成数据方法专题（source-of-truth / 难样本驱动 / agent 多样化）
@@ -188,7 +207,9 @@ updated: 2026-09-02
 - [[label-efficient-ocr]] — ⭐ 降低标注依赖的五条路径（自监督对比/合成预训/迁移权重/真实合成/HTG），对前端DETR+后端AR 的叠加 pipeline（2026-07-29）
 
 ## Comparisons（对比）
+
 - [[e2e-ocr-comparison]] — 端到端 OCR 模型横评（参数/创新/评测表）
 
 ## Queries（问答归档）
+
 _（空）_
